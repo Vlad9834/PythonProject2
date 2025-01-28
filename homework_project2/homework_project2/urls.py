@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index ),
     path("Phone shop/",views.store,name="shop"),
+    path("add-phone/",views.add_phone,name="add_phone"),
+    path("our-contacts/",views.contacts,name="contacts"),
     path("phone/<int:phone_id>",views.show_products,name="show_products"),
 ]

@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "homeproject2/base.html" %}
+{% block content %}
 {% for phone in phones %}
+<br>
 <a href="{% url 'show_products' phone.id %}">{{phone.brand}} - {{phone.model}}</a>
 <br>
 {% endfor %}
-
-</body>
-</html>
+{% endblock %}

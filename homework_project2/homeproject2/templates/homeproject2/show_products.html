@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "homeproject2/base.html" %}
+{% block content %}
 {{phone.brand}}
 <br>
 {{phone.model}}
@@ -12,5 +7,4 @@
 {{phone.price}}
 <br>
 
-</body>
-</html>
+{% endblock %}
