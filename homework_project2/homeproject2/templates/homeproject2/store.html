@@ -4,5 +4,15 @@
 <br>
 <a href="{% url 'show_products' phone.id %}">{{phone.brand}} - {{phone.model}}</a>
 <br>
+
 {% endfor %}
+<h1>Список брендов:</h1>
+{% for brand in brands %}
+<a href="{% url 'show_phones_by_brand' brand.id %}">{{brand.name}}</a>
+<br>
+
+{% endfor %}
+<br>
+<a href="{% url 'cases'  %}">список чехлов</a>
+<br>
 {% endblock %}

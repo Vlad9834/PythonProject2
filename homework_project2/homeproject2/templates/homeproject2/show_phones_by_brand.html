@@ -1,0 +1,9 @@
+{% extends "homeproject2/base.html" %}
+{% block content %}
+<h1>Модели в наличии:</h1>
+{% for phone in phones %}
+<a href="{% url 'show_phone' phone.id %}">{{phone.model}}</a>
+<br>
+{% endfor %}
+
+{% endblock %}

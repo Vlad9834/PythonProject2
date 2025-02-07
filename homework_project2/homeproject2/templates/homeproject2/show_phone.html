@@ -1,0 +1,13 @@
+{% extends "homeproject2/base.html" %}
+{% block content %}
+<h1>Информация о телефоне</h1>
+<br>
+{{phone.model}}
+<br>
+{{phone.price}}
+<br>
+<h2>Какие чехлы подходят к этому телефону</h2>
+{% for case in cases %}
+{{case}}
+{% endfor %}
+{% endblock %}

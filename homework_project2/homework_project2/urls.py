@@ -19,11 +19,18 @@ from django.urls import path
 
 from homeproject2 import views
 
+from django.urls import include, path
+from debug_toolbar.toolbar import debug_toolbar_urls
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index ),
-    path("Phone shop/",views.store,name="shop"),
-    path("add-phone/",views.add_phone,name="add_phone"),
-    path("our-contacts/",views.contacts,name="contacts"),
-    path("phone/<int:phone_id>",views.show_products,name="show_products"),
-]
+    path('', views.index),
+    path("phone-shop/", views.store, name="shop"),
+    path("add-phone/", views.add_phone, name="add_phone"),
+    path("our-contacts/", views.contacts, name="contacts"),
+    path("phone/<int:phone_id>", views.show_products, name="show_products"),
+    path("brand/<int:brand_id>", views.show_phones_by_brand, name="show_phones_by_brand"),
+    path("show-phone/<int:phone_id>", views.show_phone, name="show_phone"),
+    path("cases/", views.cases, name="cases"),
+] + debug_toolbar_urls()
